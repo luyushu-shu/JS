@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS基本语法———变量</title>
+</head>
+<body>
+    <script>
+        //var 声明变量
+        var a = 10;
+        a = 'hello world';
+        alert(a); // 输出：hello world
+        //特点一：
+        //作用域比较大,全局变量
+        //特点二：
+        //可以重复定义
+        //let与var类似，但作用域为所处的代码块,且不能重复定义
+        //const 声明常量
+        {
+            var b = 20; // 在块级作用域内声明变量
+            alert(b); // 输出：20
+        }
+    </script>
+</body>
+</html>
