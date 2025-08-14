@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-对象-DOM-获取元素</title> 
+    </head>
+    <body>
+        <img id = "h1" src="./课堂练习资料/01. DOM练习-初始代码/img/off.gif"> <br> <br>
+
+        <div class="cls"> 传智教育</div> <br> 
+        <div class="cls"> 黑马程序员</div> <br>
+
+        <input type="checkbox" name="hobby" >电影
+        <input type="checkbox" name="hobby" >音乐
+        <input type="checkbox" name="hobby" >旅游 
+    </body>
+
+    <script>
+        // //获取element元素
+        // //1.通过id获取元素
+    //    var img = getElementById("h1");
+        //  alert(img);
+        // //2、根据标签获取
+        // var divs = document.getElementsByTagName("div");
+        // for(var i=0; i<divs.length; i++){
+        //     const element = divs[i];
+        //     alert(element);
+        // }
+        // //3、根据name属性获取
+        // var hobbys = getElementsByName("hobby");
+        // for(var i=0; i<hobbys.length; i++){
+        //     const element = hobbys[i];
+        //     alert(element);
+        // }
+        // //4、根据class属性获取
+        // var cls = document.getElementsByClassName("cls");
+        // for(var i=0; i<cls.length; i++){
+        //     const element = cls[i];
+        //     alert(element);
+        // }
+    //    var divs = document.getElementsByTagName("div");
+    //    var div1 = divs[0];
+
+    //    div1.innerHTML = "传智教育-黑马程序员";
+
+    //点亮灯泡：改变src属性
+    var img = document.getElementById("h1");
+    img.src = "./课堂练习资料/01. DOM练习-初始代码/img/on.gif";
+
+    //把所有div标签后面加上very good
+    var divs = document.getElementsByTagName("div");
+    for(var i=0; i<divs.length; i++){
+        const element = divs[i];
+        
+        element.innerHTML = element.innerHTML + " <font color='red'> very good</font>";
+    }
+
+    //使所有复选框处于选中状态
+    var hobbys = document.getElementsByName("hobby");
+    for(var i=0; i<hobbys.length; i++){
+        const element = hobbys[i];
+        element.checked = true;//选中状态
+    }
+
+    </script>
+</html>
