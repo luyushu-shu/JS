@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS对象——字符串</title>
+</head>
+<body>
+    <script>
+        // var user = {
+        //     name: "张三",
+        //     age: 25,
+        //     gender:"男",
+        //     eat:function() {
+        //         alert("吃饭");
+        //     },
+        //     //:与function可以省略
+        // }
+        // alert(user.name); // 输出: 张三
+        // alert(user.age); // 输出: 25
+        // user.eat(); // 输出: 吃饭
+
+        var jsonstr = '{"name":"张三","age":20,"address":["上海","北京","西安"]}';
+        // 将JSON字符串转换为JavaScript对象
+        var user = JSON.parse(jsonstr);
+        //JS对象转换为JSON字符串
+        var jsonString = JSON.stringify(user);
+        alert(jsonString); // 输出: {"name":"张三","age":20,"address":["上海","北京","西安"]}
+    </script>
+</body>
+</html>
