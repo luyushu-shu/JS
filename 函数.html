@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS基本语法———数据类型，运算符，流程控制语句</title>
+</head>
+<body>
+    <!-- 
+    形式参数不需要类型，因为JavaScript是弱类型语言
+    返回值也不需要类型 
+    -->
+    <script>
+        //定义函数一
+        function add(a, b) {
+            return a + b;
+        }
+        console.log(add(1, 2)); // 3
+        console.log(add('1', '2')); // 12
+        console.log(add(1, '2')); // 12
+        console.log(add(true, false)); // 1
+        console.log(add(null, undefined)); // NaN
+         //定义函数二
+        var add2 = function(a, b) {
+            return a + b;
+        }
+        console.log(add2(1, 2)); // 3
+        console.log(add2('1', '2')); // 12  
+        console.log(add2(1, '2')); // 12
+        console.log(add2(true, false)); // 1
+        console.log(add2(null, undefined)); // NaN
+    </script>
+</body>
+</html>
