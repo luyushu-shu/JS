@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS事件案例</title>
+    </head>
+    <body>
+        <img src="./课堂练习资料/02. 事件练习-初始代码/img/off.gif" id="light"> <br>
+        <input type="button" value="点亮" onclick=on()>
+        <input type="button" value="熄灭" onclick=off()>
+        <br><br>
+        <input type="text" id = "name" value="itcast" onfocus="ffn()" onblur="bfn()" > 
+        <br><br>
+        <input type="checkbox" name="hobby" >电影
+        <input type="checkbox" name="hobby" >音乐
+        <input type="checkbox" name="hobby" >游戏
+        <br><br>
+        <input type="button" value="全选" onclick="selectall()">
+        <input type="button" value="全不选" onclick="cancelall()" >
+    </body>
+    <script>
+        function on() {
+            document.getElementById("light").src = "./课堂练习资料/02. 事件练习-初始代码/img/on.gif";
+        }
+        function off() {
+            document.getElementById("light").src = "./课堂练习资料/02. 事件练习-初始代码/img/off.gif";
+        }
+        function ffn() {
+           var input = document.getElementById("name");
+            input.value = input.value.toUpperCase();
+            console.log("获得焦点");
+        }
+
+        function bfn() {
+            var input = document.getElementById("name");
+            input.value = input.value.toLowerCase();
+            console.log("失去焦点");
+        }
+
+        function selectall() {
+            var checkboxes = document.getElementsByName("hobby");
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = true;
+            }
+            console.log("全选");
+        }
+
+        function cancelall() {
+            var checkboxes = document.getElementsByName("hobby");
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = false;
+            }
+            console.log("全不选");
+        }
+    </script>
+</html>
