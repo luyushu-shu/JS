@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS基本语法———数据类型，运算符，流程控制语句</title>
+</head>
+<!-- 
+数据类型分为原始类型和引用类型
+原始类型：
+number：数字类型（整数、小数）
+string：字符串类型,单双引皆可
+boolean：布尔类型，true或false
+null：空值，表示无值
+undefined：声明变量未初始化时的值
+
+使用typeof操作符可以查看变量的数据类型
+-->
+<body>
+    <script>
+        // alert(typeof 123); // 输出：number
+        // alert(typeof "hello world"); // 输出：string
+        // alert(typeof true); // 输出：boolean
+        // alert(typeof null); // 输出：object（这是一个历史遗留问题）
+        // alert(typeof undefined); // 输出：undefined
+        // var num = 123;
+        // var $num = "123";
+        // var _num = 123;
+        // alert(num==$num); // 输出：true
+        // alert(num===_num); // 输出：true
+        // alert(num===$num); // 输出：false
+
+        //类型转换
+        //其他类型转换为数字（字面值不是数字，转换为NaN）
+        alert(parseInt("123")); // 输出：123
+        alert(parseInt("123ABC")); // 输出：123
+        alert(parseFloat("A456")); // 输出：NaN
+        //其他类型转换为布尔
+        //0、null、undefined、NaN、""（空字符串）转换为false，其他值转换为true
+        if ("") {
+            alert("空字符串转换为false");
+        } else {
+            alert("空字符串转换为true");
+        }
+        if (0) {
+            alert("0转换为false");
+        } else {
+            alert("0转换为true");
+        }
+        if (null) {
+            alert("null转换为false");
+        } else {
+            alert("null转换为true");
+        }
+        if (undefined) {
+            alert("undefined转换为false");
+        } else {
+            alert("undefined转换为true");
+        }
+        if (NaN) {
+            alert("NaN转换为false");
+        } else {
+            alert("NaN转换为true");
+        }
+        if (123) {
+            alert("数字123转换为true");
+        } else {
+            alert("数字123转换为false");
+        }
+        if ("hello") {
+            alert("字符串'hello'转换为true");
+        } else {
+            alert("字符串'hello'转换为false");
+        }
+        
+    </script>
+<!-- 
+ 运算符：
+算数运算符：+ - * / % ++ --
+赋值运算符：= += -= *= /= %=
+比较运算符：== === != !== > < >= <=
+逻辑运算符：&& || !
+三元运算符：条件 ? 表达式1 : 表达式2
+==会进行类型转换后比较，而===不会进行类型转换
+ -->
+</body>
+
+</html>
