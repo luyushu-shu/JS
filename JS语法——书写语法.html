@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS基本语法———书写语法</title>
+    <!-- 
+    内部脚本；将JS代码定义在HTML页面中
+    代码必须位于<script></script>中间
+    在HTML文档中，可以在任意地方，放置任意数量的<script>标签
+    一般会把脚本置于body的底部，可改善显示速度 
+
+    外部脚本；将JS代码放在外部文件中，再引入到HTML页面中
+    script标签不能自闭合    
+    -->
+
+    <!-- 内部脚本：
+    <script>
+        alert ("hello world");
+    </script> -->
+
+    <!-- 外部脚本 -->
+     <!-- <script src="./js/demo.js"></script> -->
+</head>
+<body>
+    <script>
+        //方式一：弹出警告框
+        window.alert("hello world");
+        //方式二：写入html页面中
+        document.write("hello world");
+        //方式三：写入浏览器的控制台中
+        console.log("hello world");
+    </script>
+</body>
+</html>
